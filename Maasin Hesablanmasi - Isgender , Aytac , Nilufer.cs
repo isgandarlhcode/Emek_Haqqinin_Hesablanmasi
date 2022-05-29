@@ -70,6 +70,7 @@ namespace emekHaqqi
                 else
                 {
                     Console.WriteLine("Uşağınız olmadığı üçün elave ödeniş almırsınız . ");
+                    Console.WriteLine("Usaq pulu : " + childpayment);
                 }
 
                 if (status == "d")
