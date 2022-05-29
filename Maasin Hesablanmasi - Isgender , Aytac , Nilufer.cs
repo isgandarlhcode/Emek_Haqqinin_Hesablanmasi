@@ -41,7 +41,7 @@ namespace emekHaqqi
             {
                 Console.WriteLine("Usağınız olub olmadığını qeyd edin : / He ya yox ");
                 string childQuestion = Console.ReadLine();
-                if (childQuestion != "yox")
+                if (childQuestion == "he")
                 {
 
                     Console.Write("Neçe uşağınız olduğunu daxil ediniz : ");
@@ -107,7 +107,8 @@ namespace emekHaqqi
                 else if (totalGrossMaas > 1000 && totalGrossMaas <= 2000)
                 {
 
-                        tax = 10;
+                    tax = 20;
+                    tax = tax / 2;
                 }
 
                 else if (totalGrossMaas > 2000 && totalGrossMaas <= 3000)
@@ -119,7 +120,8 @@ namespace emekHaqqi
 
                 else if (totalGrossMaas > 3000)
                 {
-                        tax = 15;
+                    tax = 30;
+                    tax = tax / 2;
                 }
             }
 
@@ -139,7 +141,6 @@ namespace emekHaqqi
                 else if (totalGrossMaas > 2000 && totalGrossMaas <= 3000)
                 {
                     tax = 25;
-
                 }
 
                 else if (totalGrossMaas > 3000)
@@ -154,7 +155,7 @@ namespace emekHaqqi
             taxinAZN = Math.Round(((totalGrossMaas * tax / 100)), 2);
             netSalary = Math.Round((totalGrossMaas - taxinAZN), 2);
             Console.WriteLine("Vergi tetbiq olunmadan onceki maasiniz : " + totalGrossMaas + " AZN ");
-            Console.WriteLine("elillik dereceniz üçün xalis maaşınız : " + netSalary + "AZN");
+            Console.WriteLine("Elillik dereceniz üçün xalis maaşınız : " + netSalary + "AZN");
             Console.WriteLine("Maaşınıza tetbiq olunan vergi faizi : " + tax + "%");
             Console.WriteLine("Maaşınızdan çıxılan vergi : " + taxinAZN + "AZN");
 
